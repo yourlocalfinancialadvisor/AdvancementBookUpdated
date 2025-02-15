@@ -1,5 +1,5 @@
 ### About
-Advancement Book adds an advancement book and advancement stand that opens your advancement menu.
+Advancement Book adds an advancement book and an advancement stand that opens your advancement menu.
 
 **Updated from ParkerMc's [Advancement Book](https://www.curseforge.com/minecraft/mc-mods/advancement-book).**
 
