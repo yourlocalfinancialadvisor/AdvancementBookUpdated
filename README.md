@@ -1,5 +1,5 @@
 ### About
-Advancement Book Updated disables the advancement button in the menu (can be configured) and replaces it with a book instead.
+Advancement Book adds an advancement book and advancement stand that opens your advancement menu.
 
 **Updated from ParkerMc's [Advancement Book](https://www.curseforge.com/minecraft/mc-mods/advancement-book).**
 
