@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "root": {
+      "trigger": "minecraft:location"
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "advancement-book-updated:advancement_book",
+      "advancement-book-updated:advancement_bookstand_1",
+      "advancement-book-updated:advancement_bookstand_2"
+    ]
+  }
+}

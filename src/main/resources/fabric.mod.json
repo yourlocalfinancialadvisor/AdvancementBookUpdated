@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "advancement-book-updated",
+	"version": "${version}",
+	"name": "Advancement Book Updated",
+	"description": "Adds a book to show your advancements! Updated from the mod by ParkerMc.",
+	"authors": [
+		"MrChumbucket"
+	],
+	"contact": {
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/advancement-book-updated/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"mr_chumbucket.advancementbookupdated.AdvancementBookUpdated"
+		],
+		"client": [
+			"mr_chumbucket.advancementbookupdated.AdvancementBookUpdatedClient"
+		],
+		"modmenu": [
+			"mr_chumbucket.advancementbookupdated.integration.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"advancement-book-updated.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

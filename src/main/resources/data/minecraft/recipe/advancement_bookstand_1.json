@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "advancement_bookstand",
+    "category": "misc",
+    "pattern": [
+        "pbp",
+        "www",
+        "www"
+    ],
+    "key": {
+        "p": {
+            "item": "minecraft:purple_dye"
+        },
+        "b": {
+            "item": "minecraft:book"
+        },
+        "w": {
+            "tag": "minecraft:planks"
+        }
+    },
+    "result": {
+        "id": "advancement-book-updated:advancement_bookstand"
+    }
+}

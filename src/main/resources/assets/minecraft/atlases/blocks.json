@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "type": "single",
+      "resource": "advancement-book-updated:entity/advancement_bookstand"
+    }
+  ]
+}

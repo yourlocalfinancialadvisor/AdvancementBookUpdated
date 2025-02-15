@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "pbp"
+    ],
+    "key": {
+        "p": {
+            "item": "minecraft:purple_dye"
+        },
+        "b": {
+            "item": "minecraft:book"
+        }
+    },
+    "result": {
+        "id": "advancement-book-updated:advancement_book"
+    }
+}

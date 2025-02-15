@@ -1,0 +1,12 @@
+{
+  "itemgroup.advancement-book-updated.advancement_book": "Advancement Book",
+  "item.advancement-book-updated.advancement_book": "Advancement Book",
+  "block.advancement-book-updated.advancement_bookstand": "Advancement Bookstand",
+
+  "advancement-book-updated.midnightconfig.title": "Advancement Book Updated",
+  "advancement-book-updated.midnightconfig.GIVE_FIRST_JOIN": "Give book on first join",
+  "advancement-book-updated.midnightconfig.GIVE_FIRST_JOIN.tooltip":"Enables giving everyone a book the first time they join.",
+
+
+  "advancement-book-updated.midnightconfig.DISABLE_ADVANCEMENT_BUTTON": "Disable the advancement button"
+}
