@@ -1,7 +1,7 @@
 {   "parent": "block/block",
     "textures": {
         "particle": "advancement-book-updated:block/advancement_bookstand_bottom",
-        "bottom": "minecraft:block/oak_planks",
+        "bottom": "advancement-book-updated:block/advancement_bookstand_bottom",
         "top": "advancement-book-updated:block/advancement_bookstand_top",
         "side": "advancement-book-updated:block/advancement_bookstand_side"
     },
