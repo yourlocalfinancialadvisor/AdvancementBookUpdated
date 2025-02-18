@@ -16,6 +16,7 @@ import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
@@ -24,7 +25,6 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class AdvancementBookstandBlock extends BlockWithEntity implements BlockEntityProvider {
-    public static final MapCodec<AdvancementBookstandBlock> CODEC = createCodec(AdvancementBookstandBlock::new);
     private static final VoxelShape SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D);
 
     public AdvancementBookstandBlock(Settings settings) {
@@ -32,22 +32,17 @@ public class AdvancementBookstandBlock extends BlockWithEntity implements BlockE
     }
 
     @Override
-    protected MapCodec<? extends BlockWithEntity> getCodec() {
-        return CODEC;
-    }
-
-    @Override
-    protected boolean hasSidedTransparency(BlockState state) {
+    public boolean hasSidedTransparency(BlockState state) {
         return true;
     }
 
     @Override
-    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
 
     @Override
-    protected BlockRenderType getRenderType(BlockState state) {
+    public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.MODEL;
     }
 
@@ -58,11 +53,11 @@ public class AdvancementBookstandBlock extends BlockWithEntity implements BlockE
 
     @Override
     public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return world.isClient ? validateTicker(type, ModBlockEntityTypes.ADVANCEMENT_BOOKSTAND, AdvancementBookStandBlockEntity::tick) : null;
+        return world.isClient ? checkType(type, ModBlockEntityTypes.ADVANCEMENT_BOOKSTAND, AdvancementBookStandBlockEntity::tick) : null;
     }
 
     @Override
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if(world.isClient()) {
             this.openAdvancementGUI();
         }
@@ -87,7 +82,7 @@ public class AdvancementBookstandBlock extends BlockWithEntity implements BlockE
     }
 
     @Override
-    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
+    public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
     }
 }

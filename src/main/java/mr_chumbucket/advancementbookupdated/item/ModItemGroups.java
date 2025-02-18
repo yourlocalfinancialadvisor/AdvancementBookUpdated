@@ -25,7 +25,7 @@ public class ModItemGroups {
     );
 
     private static RegistryKey<ItemGroup> register(String id) {
-        return RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(AdvancementBookUpdated.MOD_ID, id));
+        return RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(AdvancementBookUpdated.MOD_ID, id));
     }
 
     public static void load() {

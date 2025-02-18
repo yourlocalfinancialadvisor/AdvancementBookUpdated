@@ -19,7 +19,7 @@ public class ModItems {
 
     public static Item register(String id, Item item)
     {
-        return Registry.register(Registries.ITEM, Identifier.of(AdvancementBookUpdated.MOD_ID, id), item);
+        return Registry.register(Registries.ITEM, new Identifier(AdvancementBookUpdated.MOD_ID, id), item);
     }
 
     public static void load() {

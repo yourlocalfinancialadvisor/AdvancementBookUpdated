@@ -50,7 +50,7 @@ public class AdvancementBookStandRenderer implements BlockEntityRenderer<Advance
       float o = MathHelper.lerp(f, advancementBookStandBlockEntity.pageTurningSpeed, advancementBookStandBlockEntity.nextPageTurningSpeed);
       this.book.setPageAngles(g, MathHelper.clamp(m, 0.0F, 1.0F), MathHelper.clamp(n, 0.0F, 1.0F), o);
       VertexConsumer vertexConsumer = BOOK_TEXTURE.getVertexConsumer(vertexConsumerProvider, RenderLayer::getEntitySolid);
-      this.book.renderBook(matrixStack, vertexConsumer, i, j, -1);
+      this.book.renderBook(matrixStack, vertexConsumer, i, j, 1.0F, 1.0F, 1.0F, 1.0F);
       matrixStack.pop();
    }
 }
